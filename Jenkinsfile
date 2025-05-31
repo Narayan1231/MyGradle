@@ -2,7 +2,7 @@ pipeline {
     agent any  // Use any available agent
 
     tools {
-        gradle 'Gradle-9'  // Ensure this matches the name configured in Jenkins
+        gradle 'Gradle'  // Ensure this matches the name configured in Jenkins
         jdk 'JDK'
     }
     stages {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh './gradlew build'  // Run Maven build
+                sh 'gradle build'  // Run Maven build
             }
         }
 
